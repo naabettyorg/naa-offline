@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+  <link href="css/blk-design-system.min.css" rel="stylesheet" />
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+      <!--<link rel="script" href="main.js" type="text/javascript">-->
+    <title>Register Now</title>
+
+  </head>
+  <body style="background-image: url('images/background.jpg');">
+<div class="container">
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="transition.html">
+					<h3 style="background: blue;">Registration Form</h3>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="firstName">First Name</label>
+							<input type="text" class="form-control" id="firstName">
+						</div>
+						<div class="form-wrapper">
+							<label for="lastName">Last Name</label>
+							<input type="text" class="form-control" id="lastName">
+						</div>
+					</div>
+
+                   <div class="form-wrapper">
+                       <div class="form-wrapper">
+							<label for="image">Upload Profile Image</label>
+
+						</div>
+						<div class="form-wrapper">
+							<input type='file' id="image">"
+						</div>
+
+					</div>
+
+					<div class="form-wrapper">
+						<label for="email">Email</label>
+						<input type="text" class="form-control" id="email">
+					</div>
+					<div class="form-wrapper">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password">
+					</div>
+					<div class="form-wrapper">
+						<label for="confirmPassword">Confirm Password</label>
+						<input type="password" class="form-control" id="confirmPassword">
+          </div>
+          <div class="">
+            <fieldset class="form-wrapper" data-role="collapsible">
+              <legend>Business Information</legend>
+                            <div class="form-wrapper">
+                <label for="nameOfBusiness">Name Of Business</label>
+                <input type="text" class="form-control" id="nameOfBusiness">
+              </div>
+              <div class="form-wrapper">
+                  <label for="location">Location of Business</label>
+                  <input type="text" class="form-control" id="location">
+                </div>
+                <div class="form-wrapper">
+                    <label for="telephone">Business Phone</label>
+                    <input type="tel" class="form-control" id="telephone">
+                  </div>
+                  <div class="form-wrapper">
+                      <label for="specialty"  >Specialty</label>
+                      <input type="text" value="Barber" class="form-control" id="specialty">
+                    </div>
+              <div class="form-wrapper ">
+                        <label for="experience">Years of Work Experience</label>
+                        <input type="number" class="form-control" id="experience">
+                      </div>
+            </fieldset>
+
+          </div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" required> I accept the Terms of Use & Privacy Policy.
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<button type="submit" onclick="saveData()" >Register Now
+
+                    </button>
+				</form>
+
+  <hr>
+  <div class="row">
+<h4><a href="#">Sign In</a> if you already have an account</h4>
+  </div>
+
+</div>
+
+<script>
+    function saveData() {
+
+        var info = {
+            first: localStorage.setItem('first_name', document.getElementById('firstName').value),
+            last: localStorage.setItem('last_name', document.getElementById('lastName').value),
+            email: localStorage.setItem('email', document.getElementById('email').value),
+            business: localStorage.setItem('business_name', document.getElementById('nameOfBusiness').value),
+            location: localStorage.setItem('location', document.getElementById('location').value),
+            telephone: localStorage.setItem('telephone', document.getElementById('telephone').value),
+            specialty: localStorage.setItem('specialty', document.getElementById('specialty').value),
+            experience: localStorage.setItem('experience', document.getElementById('experience').value),
+            image: localStorage.setItem('image', document.getElementById('image').value),
+
+        };
+
+
+        var savedInfo = localStorage.setItem('info', JSON.stringify(info));
+    }
+
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+</div>
+
+</div>
+  </body>
+</html>

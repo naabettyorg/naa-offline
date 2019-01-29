@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>
+    Profile Page
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link href="css/blk-design-system.min.css" rel="stylesheet" />
+
+       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body class="profile-page" onload="retrieveData()"  onchange="readURL(this)">
+  <!-- Navbar -->
+  <div class="wrapper">
+    <div class="page-header">
+      <img src="images/naa.jpg" class="dots">
+      <img src="images/naa.jpg" class="path">
+      <div class="container align-items-center">
+       
+          <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+            <div class="card card-coin card-plain">
+
+
+              <div class="card-header">
+                <img src="images/naa.jpg" id="image" class="img-center img-fluid rounded-circle" >
+                <h4 class="title" id="fullname">Name Of User</h4>
+              </div>
+              <div class="card-body " style="text-align: center">
+                    <div class="form-wrapper">
+                        <label for="">Email</label>
+                        <span id="email">promise@localhost.com</span>
+                      </div>
+                        <div class="form-wrapper">
+                            <label for="">Age</label>
+                            <span id="age">34</span>
+                          </div>
+                   <div class="form-wrapper">
+                                <label for="">Name Of Business</label>
+                                <span id="business">Styles</span>
+                              </div>
+                          <div class="form-wrapper">
+                              <label for="">Specialty</label>
+                              <span id="specialty">Haircuts</span>
+                            </div>
+                            <div class="form-wrapper">
+                                <label for="">Work Experience</label>
+                                <span id="experience">3 Years</span>
+                              </div>
+                              <div class="form-wrapper">
+                                  <label for="">Telephone</label>
+                                  <span id="telephone">+23323456789</span>
+                                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  function retrieveData() {
+
+      let fullname = [localStorage.getItem('first_name') + ' ' + localStorage.getItem('last_name')];
+      document.getElementById('fullname').innerHTML = fullname.toString();
+
+      document.getElementById('email').innerHTML = localStorage.getItem('email');
+      document.getElementById('age').innerHTML = localStorage.getItem('age');
+      document.getElementById('specialty').innerHTML = localStorage.getItem('specialty');
+      document.getElementById('experience').innerHTML = localStorage.getItem('experience').concat(' Years');
+      document.getElementById('telephone').innerHTML = localStorage.getItem('telephone');
+
+  }
+
+
+</script>
+</body>
+
+</html>
